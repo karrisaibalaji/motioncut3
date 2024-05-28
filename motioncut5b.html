@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #e5e5e5;
+            display: flex;
+        }
+
+        /* Vertical Header styles */
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 2rem 1rem;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header .logo img {
+            max-width: 100px;
+        }
+
+        header .search-bar {
+            margin-bottom: 2rem;
+        }
+
+        header .search-bar input {
+            width: calc(100% - 2rem);
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header nav ul li {
+            margin: 1.5rem 0;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        header .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        header .social-media a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        header .social-media a:hover {
+            color: #ffc107;
+        }
+
+        /* Main section styles */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-left: 270px; /* Offset for the fixed header */
+        }
+
+        /* Product section styles */
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(50% - 1.5rem);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .product:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            color: #343a40;
+        }
+
+        .product-info .price {
+            color: #dc3545;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-info .description {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #6c757d;
+        }
+
+        .product-info .cta {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-info .cta:hover {
+            background-color: #c82333;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(100% - 1.5rem);
+            }
+
+            header {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="ShowKart Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="nike.webp" alt="Nike Air Max">
+            </div>
+            <div class="product-info">
+                <h1>Nike Air Max</h1>
+                <p class="price">$199.99</p>
+                <p class="description">The Nike Air Max offers superior comfort, innovative design, and cutting-edge
+                    performance.</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="product-image">
+                <img src="adidas.jpeg" alt="Adidas Ultraboost">
+            </div>
+            <div class="product-info">
+                <h1>Adidas Ultraboost</h1>
+                <p class="price">$179.99</p>
+                <p class="description">Experience unparalleled cushioning and energy return with the Adidas Ultraboost,
+                    designed for both style and performance.</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="product-image">
+                <img src="puma.jpeg" alt="Puma RS-X">
+            </div>
+            <div class="product-info">
+                <h1>Puma RS-X</h1>
+                <p class="price">$129.99</p>
+                <p class="description">The Puma RS-X blends retro design with modern technology for a unique and stylish
+                    look.</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="product-image">
+                <img src="balance.jpeg" alt="New Balance 990">
+            </div>
+            <div class="product-info">
+                <h1>New Balance 990</h1>
+                <p class="price">$149.99</p>
+                <p class="description">The New Balance 990 combines high-quality materials and craftsmanship for the
+                    perfect blend of cushioning and stability.</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
